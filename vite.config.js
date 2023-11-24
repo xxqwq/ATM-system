@@ -1,6 +1,7 @@
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import path from "path"
+import UnoCSS from "unocss/vite"
 // 自动引入插件
 import AutoImport from "unplugin-auto-import/vite"
 import Components from "unplugin-vue-components/vite"
@@ -14,7 +15,8 @@ export default defineConfig({
 		}),
 		Components({
 			resolvers: [ElementPlusResolver()]
-		})
+		}),
+		UnoCSS()
 	],
 	resolve: {
 		alias: {
